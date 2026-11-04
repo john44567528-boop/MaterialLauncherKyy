@@ -4,8 +4,6 @@
 
 *English: a Material You style Android home launcher written in Kotlin and Jetpack Compose. Open source under the MIT license.*
 
-<!-- Добавьте сюда скриншоты, например: ![Главный экран](docs/screenshots/home.png) -->
-
 ## Возможности
 
 - Динамические цвета Material You (Android 12+), светлая и тёмная темы, выбор акцентного цвета, стиль палитры и контраст
@@ -23,37 +21,6 @@
 Готовые APK лежат в разделе **Releases**. Скачайте `MaterialLauncher-release.apk`, установите и выберите приложение лаунчером по умолчанию.
 
 Требуется Android 8.0 (API 26) или новее.
-
-## Сборка
-
-Нужны JDK 17 и Gradle 8.7 (либо Android Studio).
-
-```bash
-# отладочная сборка
-gradle assembleDebug
-
-# релизная сборка (без своего ключа подписывается отладочным ключом)
-gradle assembleRelease
-```
-
-Готовые файлы появятся в `app/build/outputs/apk/`.
-
-### Подпись релиза
-
-Релиз подписывается ключом, если заданы переменные окружения:
-
-| Переменная | Значение |
-|---|---|
-| `KEYSTORE_FILE` | путь к файлу `.jks` |
-| `KEY_PASSWORD` | пароль хранилища и ключа (алиас ключа: `launcher`) |
-
-Без них сборка подписывается отладочным ключом. Такие сборки нельзя ставить поверх сборок, подписанных другим ключом.
-
-В GitHub Actions ключ берётся из секретов репозитория `KEYSTORE_BASE64` и `KEY_PASSWORD`. Файл ключа в репозиторий добавлять нельзя.
-
-## Участие в разработке
-
-См. [CONTRIBUTING.md](CONTRIBUTING.md). Об уязвимостях сообщайте по инструкции в [SECURITY.md](SECURITY.md).
 
 ## Лицензия
 
